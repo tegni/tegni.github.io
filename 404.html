@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+    <head style="background-color:red;">
         <meta charset="utf-8">
         <title>Page not found! • Lampe2020.github.io</title>
         <link rel="icon" href="https://www.lampe2020.de/favicon.ico">
@@ -15,7 +15,7 @@
                     case('/widgets/uhr'): {
                         window.location.href = 'https://www.lampe2020.de/widgets/uhr';
                         document.getElementById('content').innerHTML = '<p id="redirectmsg">Redirecting you to the clock widget…<br><a href="https://www.lampe2020.de/widgets/uhr" class="button verstecktimtext">Try again…</a></p>';
-                        document.body.style.backgroundColor = 'grey';
+                        document.documentElement.style.backgroundColor = 'grey';
                         break; // Prevent other cases from being ran too.
                     }
                     default: {
@@ -25,7 +25,7 @@
             });
         </script>
     </head>
-    <body style="background-color:red;">
+    <body>
         <div id="page">
             <div id="header" class="header" style="background-color:green">
                 <h1>Oops! That's a miss!</h1>
