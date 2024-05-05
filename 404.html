@@ -10,17 +10,19 @@
         <link rel="stylesheet" href="https://www.lampe2020.de/assets/css/global_neueslayout.css">
         <script src="https://www.lampe2020.de/assets/js/index.js"></script>
         <script name="autoredirect"> // If you're on some "magical" paths, the error page will redirect you to what you're probably trying to get to.
-            switch (window.location.pathname) {
-                case('/widgets/uhr'): {
-                    window.location.href = 'https://www.lampe2020.de/widgets/uhr';
-                    document.getElementById('content').innerHTML = '<p id="redirectmsg">Redirecting you to the clock widget…<br><a href="https://www.lampe2020.de/widgets/uhr" class="button verstecktimtext">Try again…</a></p>';
-                    document.body.style.backgroundColor = 'grey';
-                    break; // Prevent other cases from being ran too. 
+            document.addEventListener('DOMContentLoaded', ()=>{
+                switch (window.location.pathname) {
+                    case('/widgets/uhr'): {
+                        window.location.href = 'https://www.lampe2020.de/widgets/uhr';
+                        document.getElementById('content').innerHTML = '<p id="redirectmsg">Redirecting you to the clock widget…<br><a href="https://www.lampe2020.de/widgets/uhr" class="button verstecktimtext">Try again…</a></p>';
+                        document.body.style.backgroundColor = 'grey';
+                        break; // Prevent other cases from being ran too.
+                    }
+                    default: {
+                        document.getElementById('content').innerHTML += '<p id="noredirectmsg">No automatic redirect occurred.</p>';
+                    }
                 }
-                default: {
-                    document.getElementById('content').innerHTML += '<p id="noredirectmsg">No automatic redirect occurred.</p>';
-                }
-            }
+            });
         </script>
     </head>
     <body style="background-color:red;">
