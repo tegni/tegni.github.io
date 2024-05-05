@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Page not found! • Lampe2020.github.io</title>
+        <link rel="icon" href="https://www.lampe2020.de/favicon.ico">
+        <meta name="robots" content="noindex">
+        <meta name="description" content="Lampe2020.github.io could not find the requested page…">
+        <link rel="stylesheet" href="https://www.lampe2020.de/assets/css/global.css">
+        <link rel="stylesheet" href="https://www.lampe2020.de/assets/css/global_neueslayout.css">
+        <script src="https://www.lampe2020.de/assets/js/index.js"></script>
+        <script name="autoredirect"> // If you're on some "magical" paths, the error page will redirect you to what you're probably trying to get to.
+            switch (window.location.pathname) {
+                case('/Lampe2020/widgets/uhr'): {
+                    window.location.href = 'https://www.lampe2020.de/widgets/uhr';
+                    content.innerHTML = '<p id="redirectmsg">Redirecting you to the clock widget…<br><a href="https://www.lampe2020.de/widgets/uhr" class="button verstecktimtext">Try again…</a></p>';
+                    document.body.style.backgroundColor = 'grey';
+                    break; // Prevent other cases from being ran too. 
+                }
+                default: {
+                    content.innerHTML += '<p id="noredirectmsg">No automatic redirect occurred.</p>';
+                }
+            }
+        </script>
+    </head>
+    <body style="background-color:red;">
+        <div id="page">
+            <div id="header" class="header" style="background-color:green">
+                <h1>Oops! That's a miss!</h1>
+                <noscript>Note: JavaScript may be needed for interactive elements on this website.</noscript>
+            </div>
+            <div id="content" style="text-align:center">
+                <p id="errormsg">The page you're looking for doesn't seem to be here…</p>
+            </div>
+            <div id="footer">
+                <p>
+                    <small>
+                        <a href="https://www.lampe2020.de/seiteninfos/impressum" title="Impressum and Contact">Impressum (German)</a><br>
+                        <a href="https://www.lampe2020.de/" class="button" onclick="event.preventDefault();window.location.href='https://www.lampe2020.de/';">
+                            <img src="https://www.lampe2020.de/assets/svg/haus_weiß.svg" style="width:1em;height:1em;user-select:none;pointer-events:none;">
+                            To homepage
+                        </a>
+                    </small>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
