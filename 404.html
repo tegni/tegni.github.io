@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head style="background-color:red;">
+<html lang="en" style="background-color:red;">
+    <head>
         <meta charset="utf-8">
         <title>Page not found! • Lampe2020.github.io</title>
         <link rel="icon" href="https://www.lampe2020.de/favicon.ico">
@@ -15,7 +15,7 @@
                     case('/widgets/uhr'): {
                         window.location.href = 'https://www.lampe2020.de/widgets/uhr';
                         document.getElementById('content').innerHTML = '<p id="redirectmsg">Redirecting you to the clock widget…<br><a href="https://www.lampe2020.de/widgets/uhr" class="button verstecktimtext">Try again…</a></p>';
-                        document.documentElement.style.backgroundColor = 'grey';
+                        document.body.style.backgroundColor = document.documentElement.style.backgroundColor = 'grey';
                         break; // Prevent other cases from being ran too.
                     }
                     default: {
