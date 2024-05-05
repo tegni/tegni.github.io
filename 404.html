@@ -13,12 +13,12 @@
             switch (window.location.pathname) {
                 case('/widgets/uhr'): {
                     window.location.href = 'https://www.lampe2020.de/widgets/uhr';
-                    content.innerHTML = '<p id="redirectmsg">Redirecting you to the clock widget…<br><a href="https://www.lampe2020.de/widgets/uhr" class="button verstecktimtext">Try again…</a></p>';
+                    document.getElementById('content').innerHTML = '<p id="redirectmsg">Redirecting you to the clock widget…<br><a href="https://www.lampe2020.de/widgets/uhr" class="button verstecktimtext">Try again…</a></p>';
                     document.body.style.backgroundColor = 'grey';
                     break; // Prevent other cases from being ran too. 
                 }
                 default: {
-                    content.innerHTML += '<p id="noredirectmsg">No automatic redirect occurred.</p>';
+                    document.getElementById('content').innerHTML += '<p id="noredirectmsg">No automatic redirect occurred.</p>';
                 }
             }
         </script>
