@@ -25,7 +25,7 @@
                         break; // Prevent other cases from being ran too.
                     }
                     default: {
-                        if (window.location.pathname.startsWith('/assets/') {
+                        if (window.location.pathname.startsWith('/assets/')) {
                             encodedURL = encodeURI(`https://www.lampe2020.de${window.location.pathname}`);
                             window.location.href = encodedURL;
                             document.getElementById('content').innerHTML = `<p id="redirectmsg">Redirecting you to L2OS…<br><a href="${encodedURL}" class="button verstecktimtext">Try again…</a></p>`;
