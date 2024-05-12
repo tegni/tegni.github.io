@@ -18,8 +18,21 @@
                         document.body.style.backgroundColor = document.documentElement.style.backgroundColor = 'grey';
                         break; // Prevent other cases from being ran too.
                     }
+                    case('/L2OS'): {
+                        window.location.href = 'https://os.lampe2020.de/?ref=ghio';
+                        document.getElementById('content').innerHTML = '<p id="redirectmsg">Redirecting you to L2OS…<br><a href="https://os.lampe2020.de/?ref=ghio" class="button verstecktimtext">Try again…</a></p>';
+                        document.body.style.backgroundColor = document.documentElement.style.backgroundColor = 'grey';
+                        break; // Prevent other cases from being ran too.
+                    }
                     default: {
-                        document.getElementById('content').innerHTML += '<p id="noredirectmsg">No automatic redirect occurred.</p>';
+                        if (window.location.pathname.startsWith('/assets/') {
+                            encodedURL = encodeURI(`https://www.lampe2020.de${window.location.pathname}`);
+                            window.location.href = encodedURL;
+                            document.getElementById('content').innerHTML = `<p id="redirectmsg">Redirecting you to L2OS…<br><a href="${encodedURL}" class="button verstecktimtext">Try again…</a></p>`;
+                            document.body.style.backgroundColor = document.documentElement.style.backgroundColor = 'grey';
+                        } else {
+                            document.getElementById('content').innerHTML += '<p id="noredirectmsg">No automatic redirect occurred.</p>';
+                        }
                     }
                 }
             });
