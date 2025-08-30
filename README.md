@@ -1,2 +1,2 @@
-# Lampe2020.github.io
+# tegni.github.io
 My github.io page
